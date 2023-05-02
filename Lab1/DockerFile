@@ -1,0 +1,5 @@
+FROM alpine:latest
+RUN apk add --no-cache curl
+COPY responseCodeChecker.sh /responseCodeChecker.sh
+RUN chmod +x /responseCodeChecker.sh
+CMD ["/bin/sh", "-c", "/responseCodeChecker.sh"]
